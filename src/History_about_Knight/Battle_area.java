@@ -49,17 +49,6 @@ public class Battle_area {
         history_stop.nextLine();
         fight_test(first,second,third);
 
-//        for (int i=0; i<1; i++){
-//            System.out.println("Из под болотной мути неторопливо поднялся мертвец. Неуверенная поступь резко меняется и он уже бежит на вас! К бою!");
-//            print_battle_life(first,second);
-//            fight(first,second);
-//
-//            second.money=new Random().nextInt(90)+100;
-//            System.out.println("Враг пал, вы собрали с трупа: "+ second.money );
-//            first.money+= second.money;
-//            System.out.println();
-//            second.reborn();  // Деремся с одним и тем же врагом. В конце боя, надо его воскресить. Игрок и не заметит :)
-//        }
         System.out.println("Нажмиет Enter для продолжения");
         history_stop.nextLine();
         first.halt();    // привал
