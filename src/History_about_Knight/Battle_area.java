@@ -114,11 +114,6 @@ public class Battle_area {
         read_file("[7].txt");
         System.out.println("Нажмиет Enter для продолжения");
 
-
-
-
-
-
     }
 
     static String str(int a){
@@ -167,49 +162,6 @@ public class Battle_area {
         }
     }
 
-//    static void print_battle_life(Humanoid a, Humanoid b, Humanoid c) {   // Устаревший метод, предпочтение отдал var args
-//        int maxlenght=0;
-//
-//        String [][] str = {{a.name, b.name, c.name},
-//
-//                {"Шлем:           "+str(a.param_humanoid[0]) +"/"+ str(a.copy_param_humanoid[0])+" ["+str(a.defense[0])+"]",
-//                        str(b.param_humanoid[0]) +"/"+ str(b.copy_param_humanoid[0])+" ["+str(b.defense[0])+"]",
-//                        str(c.param_humanoid[0]) +"/"+ str(c.copy_param_humanoid[0])+" ["+str(c.defense[0])+"]"},
-//                {"Нагрудник:      "+str(a.param_humanoid[1]) +"/"+ str(a.copy_param_humanoid[1])+" ["+str(a.defense[1])+"]",
-//                        str(b.param_humanoid[1]) +"/"+ str(b.copy_param_humanoid[1])+" ["+str(b.defense[1])+"]",
-//                        str(c.param_humanoid[1]) +"/"+ str(c.copy_param_humanoid[1])+" ["+str(c.defense[1])+"]"},
-//                {"Нарукавники:    "+str(a.param_humanoid[2]) +"/"+ str(a.copy_param_humanoid[2])+" ["+str(a.defense[2])+"]",
-//                        str(b.param_humanoid[2]) +"/"+ str(b.copy_param_humanoid[2])+" ["+str(b.defense[2])+"]",
-//                        str(c.param_humanoid[2]) +"/"+ str(c.copy_param_humanoid[2])+" ["+str(c.defense[2])+"]"},
-//                {"Поножи:         "+str(a.param_humanoid[3]) +"/"+ str(a.copy_param_humanoid[3])+" ["+str(a.defense[3])+"]",
-//                        str(b.param_humanoid[3]) +"/"+ str(b.copy_param_humanoid[3])+" ["+str(b.defense[3])+"]",
-//                        str(c.param_humanoid[3]) +"/"+ str(c.copy_param_humanoid[3])+" ["+str(c.defense[3])+"]"},
-//                {"Сила орудия:    "+str(a.param_humanoid[4]),str(b.param_humanoid[4]),str(c.param_humanoid[4])}};
-//
-//
-//        for (String[] z: str) {
-//            if (z[0].length()>maxlenght) {maxlenght=z[0].length();};
-//        }
-//
-//        maxlenght+=4;
-//
-//        for (int i = 0; i< str.length; i++) {
-//            str[i][0] = str[i][0] + space(str[i][0],maxlenght) + str[i][1];
-//        }
-//
-//        for (String[] z: str) {
-//            if (z[0].length()>maxlenght) {maxlenght=z[0].length();};
-//        }
-//
-//        maxlenght+=4;
-//
-//        for (int i = 0; i< str.length; i++) {
-//            str[i][0] = str[i][0] + space(str[i][0],maxlenght) + str[i][2];
-//            System.out.println(str[i][0]);
-//        }
-//
-//
-//    }
 
     static void read_file(String str) {
         File buf_read=new File(str);
@@ -310,34 +262,6 @@ public class Battle_area {
 
     }
 
-//    static void fight(Humanoid first, Humanoid second) throws InterruptedException { // Устаревший метод, предпочтение отдал var args
-//        print_battle_life(first,second);
-//
-//
-//        while (first.Humanoid_is_alife() && second.Humanoid_is_alife()) {
-//            first.Attack(second);
-//            //second.print_health_info();
-//            second.Attack(first);
-//            //first.print_health_info();
-//            print_battle_life(first,second);
-//            System.out.println();
-//            first.print_info_fight();
-//            second.print_info_fight();
-//            System.out.println();
-//        }
-//
-//        if (!first.Humanoid_is_alife()) {
-//            System.out.println("Сэр Томас погиб. Его натура не выдержала вызова судьбы.");
-//            //break;
-//        }
-//        else
-//        second.money=new Random().nextInt(90)+100;
-//        System.out.println("Враг пал, вы собрали с трупа: "+ second.money);
-//        first.money+= second.money;
-//        System.out.println();
-//        second.reborn();
-//
-//    }
 
     static void print_battle_life_vs_shadow(ArrayList<Humanoid> list) {
         int maxlenght=0;
@@ -352,12 +276,7 @@ public class Battle_area {
 
         for (int i=1;i<list.size();i++) {
 
-            String[] str = {list.get(i).name,
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""};
+            String[] str = {list.get(i).name, "", "", "", "", ""};
 
             for (String z : str_final_print) {
                 if (z.length() > maxlenght) {
@@ -375,7 +294,6 @@ public class Battle_area {
             System.out.println(s);
 
         }
-
     }
     static void fight_test_vs_shadow(Humanoid first, Zombie...enemy) {
         int round=0;
@@ -551,33 +469,6 @@ public class Battle_area {
         buf.event_on_bridge=false;
 
     }
-
-//    static void fight(Humanoid first, Humanoid second, Humanoid third) {               // Устаревший метод, предпочтение отдал var args
-//        while (first.Humanoid_is_alife() && (second.Humanoid_is_alife() || third.Humanoid_is_alife())) {
-//            if (second.Humanoid_is_alife()) {
-//                first.Attack(second);
-//                second.Attack(first);
-//                third.Attack(first);
-//                print_battle_life(first,second,third);
-//                first.print_info_fight();
-//                second.print_info_fight();
-//                third.print_info_fight();
-//            }
-//            else {
-//                first.Attack(third);
-//                //second.print_health_info();
-//                third.Attack(first);
-//                //first.print_health_info();
-//                print_battle_life(first,second,third);
-//                System.out.println();
-//                first.print_info_fight();
-//                third.print_info_fight();
-//                System.out.println();
-//            }
-//
-//        }
-//    }
-
 
 }
 
