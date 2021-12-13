@@ -38,6 +38,8 @@ public class Battle_area {
 
 
 
+
+
         read_file("[1].txt");
         System.out.println();
         System.out.println("Нажмиет Enter для продолжения");
