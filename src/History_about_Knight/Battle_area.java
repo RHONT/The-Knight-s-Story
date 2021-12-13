@@ -36,10 +36,6 @@ public class Battle_area {
         Zombie knight_in_the_dark_3 = new Zombie("knight_in_the_dark.txt");
         knight_in_the_dark_3.setDefense(0,100,50,50);
 
-
-
-
-
         read_file("[1].txt");
         System.out.println();
         System.out.println("Нажмиет Enter для продолжения");
@@ -180,8 +176,6 @@ public class Battle_area {
             System.out.println("Часть истории не найдена");
 
         }
-
-
     }
 
     enum market {
@@ -602,6 +596,7 @@ class Humanoid implements Humanoid_ability{
 
             case "0": {
                 halt_param = true;
+
                 break;
             }
 
@@ -625,6 +620,7 @@ class Humanoid implements Humanoid_ability{
             swith_for_halt();
         }
         halt_param=false;
+        halt_craft=false;
         System.out.println("Вы продолжили путешествие.");
         System.out.println();
 
@@ -941,8 +937,6 @@ class Knight extends Humanoid implements Humanoid_ability{
 
                     }
 
-
-
                     break;
 
                 default:
@@ -955,8 +949,6 @@ class Knight extends Humanoid implements Humanoid_ability{
 
     }
 }
-
-
 
 interface Humanoid_ability{
 
