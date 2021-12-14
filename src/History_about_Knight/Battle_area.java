@@ -163,7 +163,7 @@ public class Battle_area {
 
 
     static void read_file(String str) {
-        File buf_read=new File("c:\\KH\\"+str);
+        File buf_read=new File(str);
         //String path = buf_read.getAbsolutePath(); // показывает где лежит файл(нужно понять как переназначить корневую папку.)
         //System.out.println(path);
         try {
@@ -501,7 +501,7 @@ class Humanoid implements Humanoid_ability{
     Humanoid(String str_file) {
 //        String path = new File(str_file).getAbsolutePath(); // показывает где лежит файл(нужно понять как переназначить корневую папку.)
 //        System.out.println(path);
-        File file_humanoid = new File("c:\\KH\\"+str_file);
+        File file_humanoid = new File(str_file);
 
         try {
             Scanner str_scan = new Scanner(file_humanoid);
