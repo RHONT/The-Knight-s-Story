@@ -115,12 +115,12 @@ public class Battle_area {
 
     }
 
-    static String str(int a){
+    static String str(int a) {
 
         String buf_st;
-        buf_st=Integer.toString(a);
+        buf_st = Integer.toString(a);
         return buf_st;
-    }  // служебная вещь. переводит быстро int в String
+    }  // служебная вещь. переводит быстро int в String.
 
 
     static String space(String s, int a){
